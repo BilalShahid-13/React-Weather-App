@@ -1,5 +1,5 @@
 {
-  "homepage": "https://bilalshahid-13.github.io/React-Weather-App",
+  "homepage": "https://BilalShahid-13.github.io/Weather-App-React", 
   "name": "weather-app-class",
   "version": "0.1.0",
   "private": true,
@@ -14,7 +14,6 @@
     "bootstrap-icons": "^1.11.3",
     "chart.js": "^4.4.2",
     "express": "^4.19.2",
-    "gh-pages": "^6.1.1",
     "gsap": "^3.12.5",
     "highcharts": "^11.4.1",
     "highcharts-react-official": "^3.2.1",
@@ -29,11 +28,12 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -57,6 +57,7 @@
     "@babel/preset-react": "^7.24.1",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-plugin-react": "^7.34.1",
+    "gh-pages": "^6.1.1",
     "tailwindcss": "^3.4.3"
   },
   "description": "weather app",
