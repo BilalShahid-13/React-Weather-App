@@ -55,7 +55,7 @@ export class App extends Component {
                 {/* <Home /> */}
                 <Routes>
                   <Route path="/Dashboard" element={<Dashboard />} />
-                  <Route index element={<Home />} path="/" />
+                  <Route exact element={<Home />} path="/" />
                   <Route
                     path="/today"
                     element={
