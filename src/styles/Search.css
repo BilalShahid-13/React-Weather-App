@@ -1,0 +1,129 @@
+* {
+  transition: all ease-in-out 0.8s;
+  padding: 0;
+  margin: 0;
+}
+body {
+  transition: all ease 0.8s;
+}
+
+.search {
+  @apply flex flex-row justify-center items-center gap-12;
+  transition: all ease 0.7s;
+}
+.searchbutton {
+  @apply bg-purple-600 p-3 rounded-full dark:text-white;
+}
+input {
+  position: relative;
+  width: 40%;
+  padding: 2vh 2vw;
+  border-radius: 5px 5px 0px 0px;
+  /* outline: none; */
+  user-select: none;
+  /* border: 2px rgb(192 132 252); */
+  transition: all ease 0.7s;
+  @apply dark:text-neutral-200 shadow dark:bg-zinc-800;
+}
+
+.close-icon {
+  position: absolute;
+  margin: 15vh 20vw;
+  margin-left: 51%;
+  cursor: pointer;
+  opacity: 0;
+  overflow: hidden;
+  height: 0px;
+}
+.close-icon.effect {
+  transition: all ease 0.8s;
+  opacity: 1;
+  height: auto;
+  /* animation: transparency ease 0.7s; */
+}
+input:focus {
+  outline: none;
+  @apply border-[1.5px] border-purple-500;
+}
+
+.searchbutton:hover .inner-search-button {
+  /* animation: identifier linear .8s; */
+  transform: scale(1.5);
+}
+.outer-suggestions {
+  animation: transparency linear 0.9s;
+}
+.suggestions {
+  width: 40.5%;
+  top: -7.5px;
+  position: relative;
+  left: -1vw;
+  /* margin: -vh 0vw; */
+  z-index: 999;
+  transform: translateX(69%);
+  @apply flex flex-row justify-start 
+  items-center transition-all duration-500 
+  ease-linear gap-3 pl-3
+   rounded border border-zinc-600;
+  transition: all ease 0.9s;
+}
+
+.suggestions li:nth-child(2) {
+  opacity: 0.6;
+  font-size: small;
+  @apply dark:text-zinc-400;
+}
+
+.suggestions-click.toggle {
+  background-color: red;
+}
+
+@keyframes transparency {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.root-suggestions {
+  animation: transparency ease 0.8s;
+}
+@media (max-width: 800px) {
+  input {
+    transform: translateX(10%);
+  }
+  .suggestions {
+    /* transform: translateX(70.5%); */
+    left: 0vw;
+  }
+  .selector {
+    width: 3%;
+  }
+  .close-icon {
+    margin: 13vh 20vw;
+    margin-left: 51%;
+  }
+}
+
+@media (max-width: 720px) {
+  .searchbutton {
+    @apply bg-purple-600 p-3 rounded-full dark:text-white;
+  }
+  input {
+    position: relative;
+    width: 70%;
+    padding: 2vh 2vw;
+  }
+  .close-icon {
+    right: 2vw;
+  }
+  .suggestions {
+    width: 70%;
+    position: relative;
+    left: 0vw;
+    z-index: 999;
+    transform: translateX(15.5%);
+  }
+}

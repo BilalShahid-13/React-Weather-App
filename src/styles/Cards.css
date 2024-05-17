@@ -1,0 +1,173 @@
+* {
+  transition: all ease-in-out 0.8s;
+}
+
+.scrollbar {
+  @apply overflow-x-scroll whitespace-nowrap;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+}
+.cards {
+  display: flex;
+  width: 250px;
+  height: 230px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #333;
+  width: fit-content;
+  padding: 0vh 4vw;
+  gap: 16px;
+  @apply rounded;
+}
+#cards-img {
+  width: 120px;
+}
+.cards p {
+  @apply mt-3;
+  font-size: medium;
+}
+
+/* hourly card */
+
+.hourly-card {
+  display: flex;
+  width: 300px;
+  height: 280px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #333;
+  width: fit-content;
+  padding: 0vh 4vw;
+  gap: 16px;
+  @apply rounded;
+}
+
+.card-container {
+  flex-wrap: wrap;
+  @apply grid grid-cols-4 gap-16 justify-evenly items-center;
+}
+
+.hourly-card {
+  @apply flex flex-col justify-between items-center gap-1 py-2;
+}
+.hourly-card img {
+  @apply mt-4;
+}
+
+#cards-img {
+  width: 60px; /* Adjust image size as per requirement */
+  height: 60px; /* Adjust image size as per requirement */
+}
+
+@media (max-width: 800px) {
+  .cards {
+    width: 200px;
+    height: 200px;
+  }
+  #outer-card {
+    @apply mr-2;
+  }
+  #cards-img {
+    width: 90px;
+  }
+  .card-container {
+    flex-wrap: wrap;
+    @apply grid grid-cols-3 gap-y-4 justify-evenly items-center;
+  }
+  .hourly-card {
+    height: 260px;
+    @apply flex flex-col justify-between items-center gap-4;
+  }
+  .hourly-card img {
+    @apply mt-4;
+  }
+  #cards-img {
+    width: 50px; /* Adjust image size as per requirement */
+    height: 50px; /* Adjust image size as per requirement */
+  }
+}
+.left-button,
+.right-button {
+  display: none;
+}
+
+@media (max-width: 720px) {
+  .scrollbar .left-button {
+    position: absolute;
+    display: flex;
+    left: 2vw;
+    background-color: rgb(190, 145, 230);
+    top: 56vh;
+    cursor: pointer;
+    font-size: 9vw;
+    border-radius: 100px;
+    padding: 8px;
+    z-index: 99;
+  }
+  .right-button {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    right: 2vw;
+    background-color: rgb(190, 145, 230);
+    top: 56vh;
+    cursor: pointer;
+    font-size: 9vw;
+    border-radius: 100px;
+    padding: 8px;
+    z-index: 99;
+  }
+
+  .cards {
+    display: flex;
+    position: relative;
+    width: 250px;
+    height: 230px;
+    margin-left: 12.5vw;
+    @apply rounded;
+    transition: all ease-in 0.9s;
+  }
+  .cards.toggle {
+    /* background-color: red; */
+    animation: transparency ease 0.8s;
+  }
+
+  /* hourly */
+  .hourly-card {
+    display: flex;
+    width: 300px;
+    height: 280px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #333;
+    width: fit-content;
+    padding: 0vh 4vw;
+    gap: 16px;
+    @apply rounded;
+  }
+
+  .card-container {
+    flex-wrap: wrap;
+    @apply grid grid-cols-1 gap-16 justify-evenly items-center;
+  }
+
+  .hourly-card {
+    @apply flex flex-col justify-between items-center gap-1 py-2;
+  }
+  .hourly-card img {
+    @apply mt-4;
+  }
+}
+
+@keyframes transparency {
+  to {
+    opacity: 0;
+  }
+  from {
+    opacity: 1;
+  }
+}

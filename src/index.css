@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::selection {
+  @apply bg-purple-500 text-white;
+}
+
+/* src
+/index.css */
+* {
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+body {
+  /* background-colord: #f0f0f0; */
+  /* color: #333; */
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Check for syntax errors in the CSS above */
+
+/* dark theme */
+:root {
+  --text-neutral-100: #fff; /* Define light mode text color */
+  --bg-zinc-800: #333; /* Define dark mode background color */
+  --border-purple-400: purple; /* Define dark mode border color */
+  --dark-text-neutral-100: #000; /* Define dark mode text color */
+}
+body.dark_mode {
+  @apply bg-zinc-800 text-neutral-200;
+}
+nav.dark_mode {
+  border-bottom: 1px solid rgb(120, 120, 120);
+}
+#left_h3.dark_mode {
+  @apply text-neutral-200;
+}
+#right_li.dark_mode {
+  @apply text-purple-600;
+}
+
+.nest-dropdown.dark_mode {
+  background-color: rgb(39 39 42);
+  border-color: rgb(192 132 252);
+}
+
+#nest-dropdown-li.dark_mode {
+  color: #f0f0f0;
+}
+
+.button.dark_mode {
+  color: #333;
+}
+
+#suggestions-li.dark_mode {
+  color: whitesmoke;
+}
+.outer-suggestions.dark_mode {
+  color: whitesmoke;
+}
+#search-bar.dark_mode {
+  @apply bg-zinc-700;
+}
+
+#city.dark_mode {
+  color: #333;
+}
+#date.dark_mode {
+  color: #333;
+}
+#circle.dark_mode {
+  color: #333;
+}
+#carousel-p.dark_mode {
+  background-color: #333;
+  color: white;
+}
+.right.dark_mode {
+  background-color: #333;
+  color: white;
+}
+#options.dark_mode {
+  border-bottom: 1px solid whitesmoke;
+}
+/* .splash.dark_mode {
+  background-color: #333;
+} */
+@media (min-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+}
