@@ -23,17 +23,17 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <Router basename="/Weather-App-React">
 >>>>>>> a6e63a3c1498d3f35a18bec624fef8918e30cbc1
-    <Auth0Provider
+    {/* <Auth0Provider
       domain="dev-co617wd8uihafkow.us.auth0.com"
       clientId="q9elPx0WpZlOHjphgnJ7vzrKelgu72v4"
       authorizationParams={{
         redirect_uri: window.location.origin,
       }}
-    >
+    > */}
       <React.StrictMode>
         <App />
       </React.StrictMode>
-    </Auth0Provider>
+    {/* </Auth0Provider> */}
 <<<<<<< HEAD
   </BrowserRouter>
 =======
