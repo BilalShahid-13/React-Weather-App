@@ -1,0 +1,223 @@
+* {
+  transition: all ease-in-out 0.8s;
+  margin: 0px;
+  padding: 0px;
+}
+
+:root {
+  --transition-lenght: 1s;
+  --bg-color: #a855f7;
+  --icon-size: 2vw;
+  --light-text: #333;
+}
+
+/* gsap */
+nav {
+  border-bottom: 1px solid #333;
+  @apply flex flex-row justify-between items-center px-2 mx-2;
+}
+.menu-icon {
+  display: none;
+}
+/* middle */
+ul {
+  @apply py-2 flex flex-row gap-6;
+}
+.right > ul > li {
+  @apply py-1 flex flex-row justify-center
+  items-center gap-2 overflow-hidden dark:text-neutral-100;
+}
+#link {
+  width: 0px;
+  text-decoration: none;
+  color: var(--bg-color);
+  transition: all ease-in-out var(--transition-lenght);
+}
+li:hover #link {
+  @apply w-full cursor-pointer;
+  color: var(--bg-color);
+  transition: all ease-in-out var(--transition-lenght);
+}
+.right > ul > li:hover span {
+  @apply w-full cursor-pointer;
+  color: var(--bg-color);
+  transition: all ease-in-out var(--transition-lenght);
+}
+.right > ul > li:hover {
+  color: var(--bg-color);
+}
+#options {
+  display: none;
+}
+nav li p {
+  @apply w-0;
+}
+.icons-size {
+  font-size: var(--icon-size);
+}
+/* right */
+
+.account {
+  display: inline;
+  width: 5%;
+  z-index: 999;
+  @apply bg-cover overflow-hidden rounded-full object-cover
+  object-center border-[2px] border-[var(--bg-color)];
+}
+.account > img {
+}
+
+.dropdown div {
+  margin: 0vh 3vw;
+}
+.dropdown {
+  position: fixed;
+  display: none;
+  transition: all ease-in-out var(--transition-lenght);
+}
+.nest-dropdown {
+  position: fixed;
+  z-index: 999px;
+  right: 2vh;
+
+  @apply flex flex-col justify-center items-center
+    text-justify tracking-wide rounded p-2
+    shadow-md gap-3 dark:bg-zinc-800 dark:border-purple-400;
+  background-color: rgba(245, 245, 245);
+}
+#nest-dropdown-li {
+  @apply cursor-default;
+}
+.account:hover .dropdown {
+  display: flex;
+  animation: dropdown ease-out 0.5s;
+}
+.nest-dropdown li {
+  @apply dark:text-neutral-100;
+  color: var(--light-text);
+}
+.nest-dropdown li:hover {
+  @apply text-purple-500;
+}
+.nest-dropdown img {
+  @apply w-11 shadow-sm bg-cover overflow-hidden rounded-full object-cover
+  object-center;
+}
+.button {
+  @apply dark:text-neutral-100 bg-purple-500 py-1 rounded w-full flex 
+  flex-row justify-center items-center text-center;
+  color: var(--light-text);
+}
+.button > div {
+  @apply flex flex-row justify-center items-center text-center gap-2;
+}
+.button > div:hover {
+  color: white;
+  cursor: pointer;
+}
+.button > h6 {
+  animation: none;
+}
+@keyframes dropdown {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 800px) {
+  nav {
+    @apply flex flex-row justify-between items-center px-2 mx-2;
+  }
+  .account {
+    width: 8%;
+  }
+  .dropdown {
+    right: 11vw;
+    top: 1vh;
+  }
+  #options {
+    display: none;
+  }
+  .menu-icon {
+    display: none;
+  }
+}
+
+@media (max-width: 720px) {
+  .upper-right {
+    position: fixed;
+    left: -100vh;
+    top: 0vh;
+    width: 100vw;
+    height: 100vh;
+    z-index: 99;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    background-color: rgba(0, 0, 0, 0);
+    transition: all ease 0.7s;
+  }
+  .right {
+    position: fixed;
+    left: 0vh;
+    top: 0vh;
+    width: 50vw;
+    height: 100vh;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    background-color: whitesmoke;
+    transition: all ease 0.7s;
+  }
+
+  #options {
+    @apply flex flex-row justify-between 
+    px-4 font-semibold items-center py-2;
+    border-bottom: 1px solid #333;
+  }
+  ul {
+    @apply flex flex-col justify-start items-center gap-11 w-full;
+  }
+
+  .right li {
+    display: flex;
+    flex-direction: row;
+  }
+
+  #link {
+    width: 100%;
+    text-decoration: none;
+    color: var(--bg-color);
+    transition: all ease-in-out var(--transition-length);
+  }
+  .icons-size {
+    color: var(--bg-color);
+    font-size: 6vw;
+  }
+  .menu-icon {
+    display: flex;
+  }
+  .right.toggle {
+    left: 0vh;
+  }
+
+  /* account */
+  .account {
+    width: 8%;
+  }
+  .dropdown {
+    right: 0;
+    top: 4vh;
+  }
+  #right > span {
+    display: flex;
+  }
+  .nest-dropdown {
+    right: 0vh;
+    top: 5vh;
+  }
+}

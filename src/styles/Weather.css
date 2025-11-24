@@ -1,0 +1,36 @@
+* {
+  transition: all ease-in-out 0.8s;
+}
+
+#circle {
+  @apply bg-purple-400 
+    rounded-full flex justify-center 
+    items-center;
+  position: absolute;
+  top: 10vh;
+  width: 70px;
+  height: 70px;
+  @apply drop-shadow-md;
+}
+.left-button,
+.right-button {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .circle {
+    top: 15vh;
+  }
+  .left-button,
+  .right-button {
+    display: none;
+  }
+}
+
+@media (max-width: 720px) {
+  #circle {
+    position: absolute;
+    top: 7vh;
+    @apply shadow-md;
+  }
+}
