@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { gsap } from "gsap";
 import { Component } from "react";
 import { Route, Routes } from "react-router-dom";
@@ -12,7 +11,6 @@ import Search from "./components/Search";
 import Weather from "./components/Weather";
 import Week from "./components/Week";
 import SplashScreen from "./Loaders/SplashScreen";
-=======
 import React, { Component } from "react";
 import Navbar from "./components/Navbar";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
@@ -26,8 +24,6 @@ import Footer from "./components/Footer";
 import Info from "./components/Info";
 import SplashScreen from "./Loaders/SplashScreen";
 import { gsap } from "gsap";
->>>>>>> a6e63a3c1498d3f35a18bec624fef8918e30cbc1
-
 export class App extends Component {
   constructor(props) {
     super(props);
@@ -56,7 +52,6 @@ export class App extends Component {
   }
 
   render() {
-<<<<<<< HEAD
     return (
       <>
         {this.state.splash ? (
@@ -103,7 +98,6 @@ export class App extends Component {
         )}
       </>
     );
-=======
     return () => {
       <>
         <Router>
@@ -148,7 +142,6 @@ export class App extends Component {
         </Router>
       </>;
     };
->>>>>>> a6e63a3c1498d3f35a18bec624fef8918e30cbc1
   }
 }
 
