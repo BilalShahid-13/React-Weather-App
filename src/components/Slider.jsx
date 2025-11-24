@@ -4,7 +4,11 @@ export class Slider extends Component {
   render() {
     return (
       <>
+<<<<<<< HEAD
         <div className="slider-container">
+=======
+        <div class="slider-container">
+>>>>>>> a6e63a3c1498d3f35a18bec624fef8918e30cbc1
           <div className="slider-row">
             <p>
               <img src="Home/gsap-greensock.svg" alt="" width={50} />

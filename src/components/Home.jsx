@@ -16,7 +16,11 @@ export class Home extends Component {
     this.setState({ loading: false }); // Hide loader when image is loaded
   };
   render() {
+<<<<<<< HEAD
     const { loading } = this.state;  // ✅ Use state instead
+=======
+    const { loading } = this.props;
+>>>>>>> a6e63a3c1498d3f35a18bec624fef8918e30cbc1
     return (
       <main>
         {loading ? (

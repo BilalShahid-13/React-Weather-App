@@ -91,7 +91,11 @@
 }
 .left-button,
 .right-button {
+<<<<<<< HEAD
   /* display: none; */
+=======
+  display: none;
+>>>>>>> a6e63a3c1498d3f35a18bec624fef8918e30cbc1
 }
 
 @media (max-width: 720px) {

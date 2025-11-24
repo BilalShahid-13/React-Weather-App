@@ -106,6 +106,7 @@ export class Cards extends Component {
       <>
         <div className="space-y-4 card_">
           <h3 className="px-4 text-lg font-medium">Today Highlights</h3>
+<<<<<<< HEAD
           <div className="flex flex-row overflow-x-scroll  px-4 pb-4">
             <button className="left-0 sticky rounded-full p-3" onClick={ScrollToLeft}>
               <FaAngleLeft />
@@ -133,6 +134,33 @@ export class Cards extends Component {
               ))}
             </div>
             <span className="right-0 sticky bg-purple-500 rounded-full p-3 " onClick={ScrollToRight}>
+=======
+          <div className="scrollbar">
+            <span className="left-button" onClick={ScrollToLeft}>
+              <FaAngleLeft />
+            </span>
+            {CardItems.map((item, index) => (
+              <div
+                className="inline-flex justify-center items-center mr-12 ml-4"
+                key={index}
+                id="outer-card"
+              >
+                <div className="cards">
+                  <h3 className="font-semibold">{item.title}</h3>
+                  <img src={`weather_info/${item.img}`} alt="" id="cards-img" />
+                  {this.state.loading ? (
+                    <Loader_ms />
+                  ) : (
+                    <p>
+                      {item.value}
+                      {item.notaion}
+                    </p>
+                  )}
+                </div>
+              </div>
+            ))}
+            <span className="right-button" onClick={ScrollToRight}>
+>>>>>>> a6e63a3c1498d3f35a18bec624fef8918e30cbc1
               <FaAngleRight />
             </span>
           </div>
